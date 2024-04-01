@@ -142,6 +142,7 @@ const Table = () => {
                     name={college.name}
                     state={college.state}
                     city={college.city}
+                    isFeatured={college.is_featured}
                   />
                 </td>
                 {/* this is course fees */}

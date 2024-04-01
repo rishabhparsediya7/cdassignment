@@ -1,7 +1,7 @@
 import college from "../assets/college.png";
 import PropTypes from "prop-types";
 
-const CollegeHeading = ({ name, state, city }) => {
+const CollegeHeading = ({ name, state, city, isFeatured }) => {
   return (
     <div className="flex flex-col">
       <div className="flex mb-4 gap-x-2">
@@ -10,6 +10,11 @@ const CollegeHeading = ({ name, state, city }) => {
         </div>
         <div className="flex flex-col gap-y-2">
           <div>
+            {isFeatured && (
+              <p className="bg-red-200 text-red-500 w-fit text-px px-5 py-0.5 font-bold rounded-2xl">
+                Featured
+              </p>
+            )}
             <p className="text-sky-400 font-bold">{name}</p>
             <p className="text-sm">
               {city}, {state}
@@ -43,6 +48,7 @@ CollegeHeading.propTypes = {
   name: PropTypes.string.isRequired, // Assuming fees is a number
   state: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
+  isFeatured: PropTypes.bool,
 };
 
 export default CollegeHeading;

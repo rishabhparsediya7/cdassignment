@@ -34,6 +34,7 @@
         "fees": 437278,
         "city": "Chicago",
         "state": "Illinois",
+        "is_featured": true,
         "avg_package": 837919,
         "highest_package": 9401299,
         "best_in": 0,
